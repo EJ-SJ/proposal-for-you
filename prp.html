@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Saishri ❤️</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffe6f2;
+            text-align: center;
+            padding: 50px;
+            transition: background 0.5s ease;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            max-width: 500px;
+            margin: auto;
+            animation: fadeIn 1.5s;
+            transition: all 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            color: #ff0000;
+            font-size: 28px;
+        }
+        p {
+            font-size: 18px;
+            color: #ff0000;
+        }
+        button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: transform 0.2s ease, background-color 0.5s ease;
+        }
+        button:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+        }
+        #hidden-message, #love-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 22px;
+            color: #fff;
+            background: rgba(255, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            animation: popIn 1s ease-in-out;
+        }
+        #love-message {
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            background: none;
+            box-shadow: none;
+        }
+        @keyframes popIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .heart {
+            font-size: 24px;
+            color: #ff0000;
+            display: inline-block;
+            animation: heartbeat 1s infinite alternate;
+        }
+        @keyframes heartbeat {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1>Hey Saishri,</h1>
+        <p>So I could have just texted this... but yeah it's been a month so you deserve more.</p>
+        <p>I like talking to you, I like EVERYTHING about you.</p>
+        <p>I apologize if it feels low effort</p>
+        <button id="proposal-btn">Click Me ✨</button>
+        <p id="hidden-message">Congrats!! You’re stuck with me now <span class="heart">❤️❤️❤️</span></p>
+    </div>
+    <p id="love-message">I LOVE YOU ❤️</p>
+    <p style="margin-top: 30px; font-size: 14px; color: #555;">(This is low effort since exams, also ChatGPT helped a bit 😅)</p>
+
+    <script>
+        document.getElementById("proposal-btn").addEventListener("click", function() {
+            document.getElementById("hidden-message").style.display = "block";
+            document.getElementById("love-message").style.display = "block";
+            document.body.style.backgroundColor = "#ff0000";
+            document.getElementById("container").style.backgroundColor = "#fff";
+            document.getElementById("container").style.boxShadow = "0 4px 20px rgba(255, 255, 255, 0.6)";
+            document.getElementById("container").style.transform = "scale(1.05)";
+            document.getElementById("proposal-btn").style.backgroundColor = "#ff0000";
+            document.getElementById("proposal-btn").style.color = "white";
+        });
+    </script>
+</body>
+</html>
